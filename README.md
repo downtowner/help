@@ -11,8 +11,11 @@ func main() {
   	
 		fmt.Println("timer")
     
- 	 }, time.second * 10, 0)//0:keep live, >0:timer execution many times
+ 	}, time.second * 10, 0)//0:keep live, >0:timer execution many times
   
+
+	timer.Killed()
+
   	pkg := help.NewPackage()
 	pkg.AddByteArray([]byte{0x12, 0x34, 0x56, 0x78, 0x99})
 
